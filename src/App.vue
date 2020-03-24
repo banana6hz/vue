@@ -1,21 +1,19 @@
 <template>
-  <div id="text">
-    {{text}}
-  </div>
+    <div>
+        <p class="txt">{{text}}</p>
+    </div>
 </template>
-
 <script>
-  export default {
-    data() {
-      return {
-        text: 'banana'
-      }
+export default {
+    data(){
+        return{
+            text:'hello banana🍌'
+        }
     }
-  }
+}
 </script>
-
 <style>
-  #text {
-    color: #fffb00;
-  }
+.txt{color:brown}
 </style>
+
+
