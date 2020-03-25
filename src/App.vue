@@ -1,19 +1,21 @@
 <template>
     <div>
-        <p class="txt">{{text}}</p>
+        <h1 class="txt">{{text}}</h1>
+        <div class="play"></div>
+        <router-view/>
     </div>
 </template>
 <script>
 export default {
     data(){
         return{
-            text:'hello banana🍌'
+            text:'Hello banana 🍌'
         }
     }
 }
 </script>
 <style>
-.txt{color:brown}
+.txt{color:brown;text-align:center;}
 </style>
 
 
