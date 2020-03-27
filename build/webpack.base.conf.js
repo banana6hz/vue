@@ -3,10 +3,7 @@ const path = require('path');//nodejs里面的基本包，用来处理路径
 const { VueLoaderPlugin } = require('vue-loader');//或者const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-// const  { CleanWebpackPlugin } = require('clean-webpack-plugin'); 
-
 const NODE_ENV=process.env.NODE_ENV;
-console.log(NODE_ENV);
 
 module.exports = {
     // 入口文件
@@ -22,8 +19,7 @@ module.exports = {
             filename: 'index.html', // 生成的文件名称
             template: 'index.html', // 指定用index.html做模版
             inject: 'body' // 指定插入的<script>标签在body底部
-        }),
-        //new CleanWebpackPlugin()
+        })
     ],
     module:{
         rules:[
@@ -65,13 +61,5 @@ module.exports = {
                 }]
             }
         ]
-    },
-    // devServer : {
-    //     // contentBase: path.join(__dirname, 'dist'),
-    //     port: 8000,
-    //     host: '0.0.0.0', // 配置成0.0.0.0的话通过ip，localhost都能访问
-    //     overlay: {
-    //         errors: true // 如果有编译错误的话直接显示到页面上
-    //     }
-    // }
+    }
 }

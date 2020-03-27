@@ -9,9 +9,7 @@ module.exports = merge(base, {
    //模块参数
     mode: 'development',
     devServer: {
-        contentBase: '../dist',
-      //端口号
-        port: '8000',
+        port: '8000',//端口号
         inline: true,
         historyApiFallback: true,//在开发单页应用时非常有用，它依赖于HTML5 history API，如果设置为true，所有的跳转将指向index.html
         hot: true//允许热加载
