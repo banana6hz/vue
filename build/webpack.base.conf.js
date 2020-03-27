@@ -59,7 +59,17 @@ module.exports = {
                         name:'../dist/assets/images/[name]-[hash:5].[ext]'// 图片文件名称加上内容哈希
                     }
                 }]
-            }
+            },
+            {
+                test: /\.js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                  loader: 'babel-loader',
+                  options: {
+                    presets: ['@babel/preset-env']
+                  }
+                }
+              }
         ]
     }
 }

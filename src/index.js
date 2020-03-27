@@ -12,15 +12,15 @@ new Vue({
 }).$mount('#app')
 
 //测试babel-loader
-// class Person {
-//     constructor(name, age) {
-//         this.name = name;
-//         this.age = age;
-//     }
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
 
-//     sayHello() {
-//         console.log(`Hello, my name is ${this.name}`);
-//     }
-// }
-// const person = new Person("Ben", 28);
-// person.sayHello();
+    sayHello() {
+        console.log(`Hello, my name is ${this.name}(//测试babel-loader)`);
+    }
+}
+const person = new Person("Ben", 28);
+person.sayHello();
